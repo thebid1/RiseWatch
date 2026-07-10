@@ -19,6 +19,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -35,6 +36,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# agent artifacts
+.playwright-mcp/
+*.png
+.task/
 
 # typescript
 *.tsbuildinfo
