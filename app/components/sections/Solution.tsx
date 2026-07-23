@@ -46,31 +46,31 @@ const features = [
 
 export function Solution() {
   return (
-    <Section id="solution" className="bg-background">
+    <Section id="solution" className="bg-white">
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <FadeIn className="lg:sticky lg:top-32">
-            <div className="section-label mb-6">
-              <ShieldCheck className="h-4 w-4 text-accent" />
+            <div className="section-label text-royal mb-6">
+              <span>02</span>
+              <span className="h-px w-10 bg-royal/40" />
               Our Solution
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white leading-[1.1] mb-6">
+            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-navy leading-[1.08] mb-6">
               R!SEWATCH protects communities before the flood arrives.
             </h2>
-            <p className="text-lg text-muted leading-relaxed">
+            <p className="text-lg text-muted leading-relaxed max-w-md">
               A solar-powered, offline-first flood early warning system that
               senses, thinks, and alerts — automatically.
             </p>
+            <div className="gauge-ticks mt-12 hidden lg:block" />
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-5">
             {features.map((feature, index) => (
               <FadeIn key={index} delay={index * 0.08}>
-                <div className="surface-card rounded-2xl p-6 h-full hover:bg-surface-elevated transition-colors duration-300">
-                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                    <feature.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                <div className="surface-card group rounded-2xl p-7 h-full transition-colors duration-300 hover:bg-sky/60">
+                  <feature.icon className="h-6 w-6 text-royal mb-6" />
+                  <h3 className="text-xl font-semibold text-navy mb-2">
                     {feature.title}
                   </h3>
                   <p className="text-muted leading-relaxed text-sm">

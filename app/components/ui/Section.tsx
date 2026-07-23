@@ -16,7 +16,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`relative w-full overflow-hidden ${padded ? "py-20 md:py-28" : ""} ${className}`}
+      className={`relative w-full overflow-hidden ${padded ? "py-24 md:py-32" : ""} ${className}`}
     >
       {children}
     </section>

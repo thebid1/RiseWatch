@@ -2,7 +2,7 @@
 
 import { FadeIn } from "../FadeIn";
 import { Section, Container } from "../ui/Section";
-import { AlertTriangle } from "lucide-react";
+import { ScrollRow } from "../ui/ScrollRow";
 
 const stats = [
   {
@@ -27,14 +27,15 @@ const points = [
 
 export function Crisis() {
   return (
-    <Section id="crisis" className="bg-surface">
+    <Section id="crisis" className="bg-paper">
       <Container>
-        <FadeIn className="max-w-3xl mb-16">
-          <div className="section-label mb-6">
-            <AlertTriangle className="h-4 w-4 text-danger" />
+        <FadeIn className="max-w-3xl mb-16 md:mb-20">
+          <div className="section-label text-royal mb-6">
+            <span>01</span>
+            <span className="h-px w-10 bg-royal/40" />
             The Problem
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white leading-[1.1] mb-6">
+          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-navy leading-[1.08] mb-6">
             Flooding in Nigeria is a growing crisis.
           </h2>
           <p className="text-lg sm:text-xl text-muted leading-relaxed">
@@ -44,29 +45,33 @@ export function Crisis() {
           </p>
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden">
+        <div className="grid md:grid-cols-3 gap-10 md:gap-8 mb-20">
           {stats.map((stat, index) => (
-            <FadeIn key={index} delay={index * 0.1} className="bg-surface p-8 md:p-10">
-              <div className="display-stat font-serif text-white mb-4">
+            <FadeIn
+              key={index}
+              delay={index * 0.1}
+              className="border-t border-line pt-8"
+            >
+              <div className="display-stat font-serif text-navy mb-4">
                 {stat.value}
               </div>
-              <p className="text-muted leading-relaxed">{stat.label}</p>
+              <p className="text-muted leading-relaxed max-w-xs">{stat.label}</p>
             </FadeIn>
           ))}
         </div>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <ScrollRow className="gap-10 md:grid md:grid-cols-3 md:gap-8">
           {points.map((point, index) => (
-            <FadeIn key={index} delay={0.3 + index * 0.1}>
-              <div className="flex items-start gap-4">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent text-sm font-bold">
-                  {index + 1}
+            <FadeIn key={index} delay={0.2 + index * 0.1} className="min-w-[80%] snap-start md:min-w-0">
+              <div className="flex items-start gap-5">
+                <span className="font-serif italic text-2xl text-royal leading-none pt-1">
+                  {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="text-lg text-zinc-300 leading-relaxed">{point}</p>
+                <p className="text-lg text-navy/80 leading-relaxed">{point}</p>
               </div>
             </FadeIn>
           ))}
-        </div>
+        </ScrollRow>
       </Container>
     </Section>
   );

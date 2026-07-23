@@ -4,6 +4,7 @@ import { Crisis } from "./components/sections/Crisis";
 import { Solution } from "./components/sections/Solution";
 import { HowItWorks } from "./components/sections/HowItWorks";
 import { Technology } from "./components/sections/Technology";
+import { Team } from "./components/sections/Team";
 import { FooterCTA } from "./components/sections/FooterCTA";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Solution />
         <HowItWorks />
         <Technology />
+        <Team />
         <FooterCTA />
       </main>
     </>

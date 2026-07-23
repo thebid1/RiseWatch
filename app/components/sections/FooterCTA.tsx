@@ -1,102 +1,120 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FadeIn } from "../FadeIn";
 import { Section, Container } from "../ui/Section";
-import { ArrowRight, CheckCircle2, Globe, Briefcase } from "lucide-react";
+import { ArrowRight, CheckCircle2, Globe } from "lucide-react";
 
 export function FooterCTA() {
   return (
-    <Section id="get-involved" className="bg-surface">
-      <Container>
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <FadeIn>
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white leading-[1.1] mb-6">
-              Join us in saving lives.
-            </h2>
-            <p className="text-lg text-muted leading-relaxed mb-8 max-w-lg">
-              R!SEWATCH is market-ready. Pilot communities are waiting. With
-              your support, we can scale fast and protect thousands.
-            </p>
+    <Section id="get-involved" className="on-dark bg-navy" padded={false}>
+      <div className="bg-gradient-to-b from-navy-deep to-navy">
+        <Container className="pt-24 md:pt-32 pb-16">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <FadeIn>
+              <div className="section-label text-royal-bright mb-6">
+                <span>06</span>
+                <span className="h-px w-10 bg-royal-bright/40" />
+                Get Involved
+              </div>
+              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white leading-[1.08] mb-6">
+                Join us in saving lives.
+              </h2>
+              <p className="text-lg text-muted-light leading-relaxed mb-10 max-w-lg">
+                R!SEWATCH is market-ready. Pilot communities are waiting. With
+                your support, we can scale fast and protect thousands.
+              </p>
 
-            <form
-              className="flex flex-col sm:flex-row gap-3 max-w-md"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 rounded-lg bg-background border border-border px-5 py-3.5 text-white placeholder:text-muted focus:outline-none focus:border-accent transition-colors"
-              />
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-base font-semibold text-white hover:bg-accent-hover transition-colors whitespace-nowrap"
+              <form
+                className="flex flex-col sm:flex-row gap-3 max-w-md"
+                onSubmit={(e) => e.preventDefault()}
               >
-                Support the Pilot
-                <ArrowRight className="h-4 w-4" />
-              </button>
-            </form>
-          </FadeIn>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            <FadeIn delay={0.1}>
-              <div className="surface-card rounded-2xl p-8 h-full">
-                <CheckCircle2 className="h-8 w-8 text-accent mb-6" />
-                <h3 className="text-2xl font-serif text-white mb-4">Now</h3>
-                <ul className="space-y-3 text-muted">
-                  <li>Market-ready product</li>
-                  <li>Pilot communities waiting</li>
-                  <li>Production ready to start</li>
-                </ul>
-              </div>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 rounded-full bg-white/5 border border-white/15 px-6 py-3.5 text-white placeholder:text-muted-light focus:outline-none focus:border-royal-bright transition-colors"
+                />
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-navy hover:bg-sky transition-colors whitespace-nowrap"
+                >
+                  Support the Pilot
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              </form>
             </FadeIn>
 
-            <FadeIn delay={0.2}>
-              <div className="surface-card rounded-2xl p-8 h-full">
-                <Globe className="h-8 w-8 text-accent mb-6" />
-                <h3 className="text-2xl font-serif text-white mb-4">Next</h3>
-                <ul className="space-y-3 text-muted">
-                  <li>Scale to communities</li>
-                  <li>Create local jobs</li>
-                  <li>Save thousands of lives</li>
-                </ul>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <FadeIn delay={0.1}>
+                <div className="dark-card rounded-2xl p-8 h-full">
+                  <CheckCircle2 className="h-7 w-7 text-royal-bright mb-6" />
+                  <h3 className="text-2xl font-serif text-white mb-4">Now</h3>
+                  <ul className="space-y-3 text-muted-light">
+                    <li>Market-ready product</li>
+                    <li>Pilot communities waiting</li>
+                    <li>Production ready to start</li>
+                  </ul>
+                </div>
+              </FadeIn>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-24 md:mt-32 pt-12 border-t border-border"
-        >
-          <p className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1]">
-            EVERY MINUTE COUNTS.{" "}
-            <span className="text-accent">EVERY LIFE MATTERS.</span>
-          </p>
-        </motion.div>
-      </Container>
-
-      {/* Footer bottom */}
-      <div className="mt-20 border-t border-border">
-        <Container>
-          <div className="flex flex-col sm:flex-row items-center justify-between py-8 gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold text-white">
-                R!SE<span className="text-accent">WATCH</span>
-              </span>
+              <FadeIn delay={0.2}>
+                <div className="dark-card rounded-2xl p-8 h-full">
+                  <Globe className="h-7 w-7 text-royal-bright mb-6" />
+                  <h3 className="text-2xl font-serif text-white mb-4">Next</h3>
+                  <ul className="space-y-3 text-muted-light">
+                    <li>Scale to communities</li>
+                    <li>Create local jobs</li>
+                    <li>Save thousands of lives</li>
+                  </ul>
+                </div>
+              </FadeIn>
             </div>
-            <p className="text-sm text-muted text-center sm:text-left">
-              © {new Date().getFullYear()} R!SEWATCH. Manufactured in Nigeria.
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mt-24 md:mt-32 pt-12 border-t border-line-dark"
+          >
+            <p className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.15]">
+              EVERY MINUTE COUNTS.{" "}
+              <span className="italic text-royal-bright">EVERY LIFE MATTERS.</span>
             </p>
-            <div className="flex items-center gap-2 text-sm text-muted">
-              <Briefcase className="h-4 w-4" />
-              v1.0
-            </div>
-          </div>
+          </motion.div>
         </Container>
+
+        {/* Footer bottom */}
+        <div className="border-t border-line-dark">
+          <Container>
+            <div className="flex flex-col sm:flex-row items-center justify-between py-8 gap-6">
+              <a href="#" className="flex items-center gap-2.5" aria-label="R!SEWATCH home">
+                <Image
+                  src="/logo-icon-white.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="h-8 w-8"
+                />
+                <Image
+                  src="/logo-wordmark-white.png"
+                  alt="R!SEWATCH — Know before the water rises"
+                  width={111}
+                  height={20}
+                  className="h-5 w-auto"
+                />
+              </a>
+              <p className="text-sm text-muted-light text-center">
+                © {new Date().getFullYear()} R!SEWATCH. Manufactured in Nigeria.
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-light">
+                v1.0
+              </p>
+            </div>
+          </Container>
+        </div>
       </div>
     </Section>
   );

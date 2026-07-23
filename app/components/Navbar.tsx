@@ -1,14 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "./ui/Button";
-import { Menu, X, Waves } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Crisis", href: "#crisis" },
   { label: "Solution", href: "#solution" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Technology", href: "#technology" },
+  { label: "Team", href: "#team" },
 ];
 
 export function Navbar() {
@@ -17,6 +19,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,53 +28,68 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "py-3 bg-background/80 backdrop-blur-xl border-b border-border"
-          : "py-4 bg-transparent"
+          ? "py-3 bg-paper/85 backdrop-blur-xl border-b border-line"
+          : "py-5 bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
-        <a href="#" className="flex items-center gap-2.5 group">
-          <Waves className="h-6 w-6 text-accent" />
-          <span className="text-xl font-bold tracking-tight text-white">
-            R!SE<span className="text-accent">WATCH</span>
-          </span>
+        <a href="#" className="flex items-center gap-2.5" aria-label="R!SEWATCH home">
+          <Image
+            src={scrolled ? "/logo-icon.png" : "/logo-icon-white.png"}
+            alt=""
+            width={36}
+            height={36}
+            className="h-9 w-9"
+          />
+          <Image
+            src={scrolled ? "/logo-wordmark.png" : "/logo-wordmark-white.png"}
+            alt="R!SEWATCH — Know before the water rises"
+            width={177}
+            height={32}
+            className="h-8 w-auto"
+          />
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted hover:text-white transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                scrolled
+                  ? "text-muted hover:text-navy"
+                  : "text-muted-light hover:text-white"
+              }`}
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Button href="#get-involved" variant="primary" size="md" showArrow={false}>
             Get Involved
           </Button>
         </div>
 
         <button
-          className="md:hidden p-2 text-white"
+          className={`lg:hidden p-2 ${scrolled ? "text-navy" : "text-white"}`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-surface border-b border-border px-6 py-6 shadow-xl">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-paper border-b border-line px-6 py-6 shadow-xl">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-base font-medium text-muted hover:text-white"
+                className="text-base font-medium text-muted hover:text-navy"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}

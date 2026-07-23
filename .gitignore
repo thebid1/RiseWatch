@@ -39,7 +39,8 @@ yarn-error.log*
 
 # agent artifacts
 .playwright-mcp/
-*.png
+/*.png
+/*.jpeg
 .task/
 
 # typescript
