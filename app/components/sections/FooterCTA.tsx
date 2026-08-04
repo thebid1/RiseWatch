@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2, Globe } from "lucide-react";
 
 export function FooterCTA() {
   return (
-    <Section id="get-involved" className="on-dark bg-navy" padded={false}>
+    <Section id="contact" className="on-dark bg-navy" padded={false}>
       <div className="bg-gradient-to-b from-navy-deep to-navy">
         <Container className="pt-24 md:pt-32 pb-16">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -16,14 +16,15 @@ export function FooterCTA() {
               <div className="section-label text-royal-bright mb-6">
                 <span>06</span>
                 <span className="h-px w-10 bg-royal-bright/40" />
-                Get Involved
+                Contact Us
               </div>
               <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white leading-[1.08] mb-6">
-                Join us in saving lives.
+                Partner with us to build resilience.
               </h2>
               <p className="text-lg text-muted-light leading-relaxed mb-10 max-w-lg">
-                R!SEWATCH is market-ready. Pilot communities are waiting. With
-                your support, we can scale fast and protect thousands.
+                HazardZero Technology Ltd. is building the future of climate
+                resilience in Africa. Whether you are an investor, partner, or
+                community leader — we would love to hear from you.
               </p>
 
               <form
@@ -39,7 +40,7 @@ export function FooterCTA() {
                   type="submit"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-navy hover:bg-sky transition-colors whitespace-nowrap"
                 >
-                  Support the Pilot
+                  Get in Touch
                   <ArrowRight className="h-4 w-4" />
                 </button>
               </form>
@@ -90,27 +91,23 @@ export function FooterCTA() {
         <div className="border-t border-line-dark">
           <Container>
             <div className="flex flex-col sm:flex-row items-center justify-between py-8 gap-6">
-              <a href="#" className="flex items-center gap-2.5" aria-label="R!SEWATCH home">
+              <a href="#" className="flex items-center gap-2.5" aria-label="HazardZero home">
                 <Image
-                  src="/logo-icon-white.png"
+                  src="/HAZARDZERO LOGO.png"
                   alt=""
                   width={32}
                   height={32}
                   className="h-8 w-8"
                 />
-                <Image
-                  src="/logo-wordmark-white.png"
-                  alt="R!SEWATCH — Know before the water rises"
-                  width={111}
-                  height={20}
-                  className="h-5 w-auto"
-                />
+                <span className="text-white font-semibold text-lg tracking-tight">
+                  HazardZero
+                </span>
               </a>
               <p className="text-sm text-muted-light text-center">
-                © {new Date().getFullYear()} R!SEWATCH. Manufactured in Nigeria.
+                © {new Date().getFullYear()} HazardZero Technology Ltd. All rights reserved.
               </p>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-light">
-                v1.0
+                Made in Nigeria
               </p>
             </div>
           </Container>

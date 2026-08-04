@@ -8,7 +8,7 @@ import { ScrollRow } from "../ui/ScrollRow";
 const team = [
   {
     name: "Tijani Shehu Ahmad",
-    role: "CEO",
+    role: "Founder & CEO",
     image: "/team-ceo.png",
   },
   {
@@ -43,11 +43,11 @@ export function Team() {
             The Team
           </div>
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-navy leading-[1.08] mb-6">
-            The people watching the water.
+            The people building the future of resilience.
           </h2>
           <p className="text-lg text-muted leading-relaxed">
-            A small team of engineers and field operators building flood
-            resilience from within the communities most at risk.
+            A dedicated team of engineers and innovators building climate
+            resilience technology from within the communities most at risk.
           </p>
         </FadeIn>
 

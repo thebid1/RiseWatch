@@ -6,8 +6,8 @@ import { Button } from "./ui/Button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Crisis", href: "#crisis" },
-  { label: "Solution", href: "#solution" },
+  { label: "About", href: "#about" },
+  { label: "Products", href: "#products" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Technology", href: "#technology" },
   { label: "Team", href: "#team" },
@@ -33,21 +33,21 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
-        <a href="#" className="flex items-center gap-2.5" aria-label="R!SEWATCH home">
+        <a href="#" className="flex items-center gap-2.5" aria-label="HazardZero home">
           <Image
-            src={scrolled ? "/logo-icon.png" : "/logo-icon-white.png"}
+            src={scrolled ? "/HAZARDZERO LOGO.png" : "/HAZARDZERO LOGO.png"}
             alt=""
             width={36}
             height={36}
             className="h-9 w-9"
           />
-          <Image
-            src={scrolled ? "/logo-wordmark.png" : "/logo-wordmark-white.png"}
-            alt="R!SEWATCH — Know before the water rises"
-            width={177}
-            height={32}
-            className="h-8 w-auto"
-          />
+          <span
+            className={`text-lg font-semibold tracking-tight transition-colors ${
+              scrolled ? "text-navy" : "text-white"
+            }`}
+          >
+            HazardZero
+          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -67,8 +67,8 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#get-involved" variant="primary" size="md" showArrow={false}>
-            Get Involved
+          <Button href="#contact" variant="primary" size="md" showArrow={false}>
+            Contact Us
           </Button>
         </div>
 
@@ -95,8 +95,8 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button href="#get-involved" variant="primary" size="md" className="mt-2" showArrow={false}>
-              Get Involved
+            <Button href="#contact" variant="primary" size="md" className="mt-2" showArrow={false}>
+              Contact Us
             </Button>
           </nav>
         </div>

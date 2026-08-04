@@ -48,7 +48,7 @@ export function Hero() {
               className="section-label text-royal-bright mb-8"
             >
               <span className="h-px w-8 bg-royal-bright/60" />
-              Offline Flood Early Warning System
+              Disaster Intelligence & Emergency Technology
             </motion.p>
 
             <motion.h1
@@ -57,8 +57,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="font-serif text-5xl sm:text-6xl md:text-7xl text-white leading-[1.04] mb-8"
             >
-              Flood early warnings,{" "}
-              <span className="text-royal-bright">even without the internet.</span>
+              Building technology that saves lives{" "}
+              <span className="text-royal-bright">before disaster strikes.</span>
             </motion.h1>
 
             <motion.p
@@ -67,9 +67,9 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg sm:text-xl text-muted-light leading-relaxed mb-10 max-w-xl"
             >
-              R!SEWATCH is a market-ready, solar-powered, offline-first flood
-              early warning system built for Nigeria&apos;s most vulnerable
-              communities.
+              HazardZero Technology Ltd. is a Nigerian disaster intelligence
+              and emergency technology company building life-saving solutions
+              for communities most vulnerable to natural disasters.
             </motion.p>
 
             <motion.form
@@ -88,7 +88,7 @@ export function Hero() {
                 type="submit"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-navy hover:bg-sky transition-colors whitespace-nowrap"
               >
-                Get Involved
+                Get in Touch
                 <ArrowRight className="h-4 w-4" />
               </button>
             </motion.form>
@@ -99,11 +99,11 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-light"
             >
-              <span>Solar-Powered</span>
+              <span>Climate-Tech</span>
               <span className="h-1 w-1 rounded-full bg-royal-bright/60" />
-              <span>Offline-First</span>
+              <span>Made in Nigeria</span>
               <span className="h-1 w-1 rounded-full bg-royal-bright/60" />
-              <span>Manufactured in Nigeria</span>
+              <span>Community-First</span>
             </motion.div>
           </div>
 

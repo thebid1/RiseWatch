@@ -14,34 +14,35 @@ const stats = [
     label: "Estimated annual losses from floods across African economies",
   },
   {
-    value: "$0",
-    label: "Compensation many rural communities receive after a flood",
+    value: "70%+",
+    label: "Of disaster-related deaths could be prevented with early warning systems",
   },
 ];
 
 const points = [
-  "Annual floods destroy lives, homes, and farmlands.",
-  "Existing warnings often arrive too late or require internet.",
+  "Annual floods destroy lives, homes, and farmlands across Africa.",
+  "Existing warnings often arrive too late or require internet access.",
   "Rural communities are most vulnerable and least connected.",
 ];
 
 export function Crisis() {
   return (
-    <Section id="crisis" className="bg-paper">
+    <Section id="about" className="bg-paper">
       <Container>
         <FadeIn className="max-w-3xl mb-16 md:mb-20">
           <div className="section-label text-royal mb-6">
             <span>01</span>
             <span className="h-px w-10 bg-royal/40" />
-            The Problem
+            About Us
           </div>
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-navy leading-[1.08] mb-6">
-            Flooding in Nigeria is a growing crisis.
+            The disaster crisis demands better technology.
           </h2>
           <p className="text-lg sm:text-xl text-muted leading-relaxed">
-            Recent disasters like Mokwa (2024), where 159 lives were lost, show
-            the urgent need for early warnings that reach everyone — especially
-            those without smartphones or internet.
+            HazardZero Technology Ltd. was founded to bridge the gap between
+            advanced technology and the communities that need it most. We build
+            affordable, accessible, and resilient disaster intelligence and
+            emergency technology solutions for communities across Africa.
           </p>
         </FadeIn>
 

@@ -15,10 +15,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "R!SEWATCH | Offline Flood Early Warning System",
+  title: "HazardZero Technology Ltd. | Disaster Intelligence & Emergency Technology",
   description:
-    "R!SEWATCH is a market-ready, solar-powered, offline-first flood early warning system manufactured in Nigeria. Saving lives through real-time water level monitoring and AI-powered rate-of-rise prediction.",
+    "HazardZero Technology Ltd. builds life-saving disaster intelligence and emergency technology. Our flagship product R!SEWATCH is a solar-powered, offline-first flood early warning system manufactured in Nigeria.",
   keywords: [
+    "HazardZero",
+    "disaster intelligence",
+    "emergency technology",
     "flood warning",
     "early warning system",
     "Nigeria",
@@ -28,9 +31,9 @@ export const metadata: Metadata = {
     "R!SEWATCH",
   ],
   openGraph: {
-    title: "R!SEWATCH | Offline Flood Early Warning System",
+    title: "HazardZero Technology Ltd. | Disaster Intelligence & Emergency Technology",
     description:
-      "Market-ready, solar-powered flood early warning system manufactured in Nigeria.",
+      "Building life-saving disaster intelligence and emergency technology for Africa's most vulnerable communities.",
     type: "website",
   },
 };

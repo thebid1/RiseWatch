@@ -46,22 +46,30 @@ const features = [
 
 export function Solution() {
   return (
-    <Section id="solution" className="bg-white">
+    <Section id="products" className="bg-white">
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <FadeIn className="lg:sticky lg:top-32">
+          <FadeIn>
             <div className="section-label text-royal mb-6">
               <span>02</span>
               <span className="h-px w-10 bg-royal/40" />
-              Our Solution
+              Our Products
             </div>
             <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-navy leading-[1.08] mb-6">
-              R!SEWATCH protects communities before the flood arrives.
+              R!SEWATCH
             </h2>
             <p className="text-lg text-muted leading-relaxed max-w-md">
-              A solar-powered, offline-first flood early warning system that
-              senses, thinks, and alerts — automatically.
+              Our flagship product — a solar-powered, offline-first flood early
+              warning system that senses, thinks, and alerts — automatically.
+              Built for Nigeria's most vulnerable communities.
             </p>
+            <div className="mt-10 rounded-2xl overflow-hidden border border-line">
+              <img
+                src="/Risewatch_Image.png"
+                alt="R!SEWATCH flood early warning system device"
+                className="w-full h-auto object-cover"
+              />
+            </div>
             <div className="gauge-ticks mt-12 hidden lg:block" />
           </FadeIn>
 

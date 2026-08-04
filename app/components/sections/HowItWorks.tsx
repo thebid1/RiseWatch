@@ -59,7 +59,7 @@ export function HowItWorks() {
             The Process
           </div>
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white leading-[1.08] mb-6">
-            How It Works
+            How R!SEWATCH Works
           </h2>
           <p className="text-lg text-muted-light leading-relaxed">
             From sensor reading to community alert in four seamless steps.
