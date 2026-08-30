@@ -55,7 +55,7 @@ export function Team() {
         <ScrollRow className="gap-8 sm:grid sm:grid-cols-2 lg:grid-cols-4">
           {team.map((member, index) => (
             <FadeIn key={member.name} delay={index * 0.1} className="min-w-[60%] snap-start sm:min-w-0">
-              <div className="border-t border-line pt-8">
+              <div className="border-t border-line pt-8 flex flex-col items-center text-center">
                 {member.image ? (
                   <Image
                     src={member.image}
@@ -71,11 +71,11 @@ export function Team() {
                     </span>
                   </div>
                 )}
-                <h3 className="text-xl font-semibold text-navy mb-1">
+                <h3 className="text-xl font-semibold text-navy">
                   {member.name}
                 </h3>
                 {member.role && (
-                  <p className="text-sm font-semibold uppercase tracking-[0.14em] text-royal">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-royal py-1">
                     {member.role}
                   </p>
                 )}
