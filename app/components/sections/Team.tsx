@@ -13,7 +13,8 @@ const team = [
   },
   {
     name: "Abdulrasaq Mustapha",
-    role: "",
+    role: "Partnership Lead",
+    image: "/Einstein Head Shot.png",
   },
   {
     name: "Aminu Abdulwaheed",
@@ -61,7 +62,7 @@ export function Team() {
                     alt={`Portrait of ${member.name}`}
                     width={160}
                     height={160}
-                    className="mb-6 h-40 w-40 rounded-full object-cover border border-line"
+                    className="mb-6 h-40 w-40 rounded-full object-cover object-top border border-line"
                   />
                 ) : (
                   <div className="mb-6 flex h-40 w-40 items-center justify-center rounded-full bg-navy">
