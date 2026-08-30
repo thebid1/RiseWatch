@@ -35,6 +35,18 @@ export const metadata: Metadata = {
     description:
       "Building life-saving disaster intelligence and emergency technology for Africa's most vulnerable communities.",
     type: "website",
+    images: [
+      {
+        url: "/HAZARDZERO%20LOGO.png",
+        width: 1200,
+        height: 1200,
+        alt: "HazardZero logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/HAZARDZERO%20LOGO.png"],
   },
 };
 
