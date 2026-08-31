@@ -33,12 +33,23 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keep anchor targets from hiding under the fixed navbar */
+  scroll-padding-top: 5rem;
+  /* The page itself should never pan/drag horizontally on mobile */
+  overflow-x: hidden;
 }
 
 body {
   background: var(--paper);
   color: var(--navy);
   font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Mobile hygiene: kill the grey flash on tap and prevent iOS font inflation */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* No sideways drag / overscroll on the page itself */
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 ::selection {
@@ -122,6 +133,8 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  /* Keep horizontal swipes inside the row instead of chaining to the page */
+  overscroll-behavior-x: contain;
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;

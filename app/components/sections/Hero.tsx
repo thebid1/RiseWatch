@@ -38,8 +38,8 @@ export function Hero() {
         <div className="absolute bottom-[-20%] left-[-10%] h-[28rem] w-[28rem] rounded-full bg-royal-bright/10 blur-[140px]" />
       </div>
 
-      <Container className="relative z-10 pt-32 pb-24 md:pt-40 md:pb-28">
-        <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+      <Container className="relative z-10 pt-28 pb-20 md:pt-40 md:pb-28">
+        <div className="grid items-center gap-12 lg:gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-serif text-5xl sm:text-6xl md:text-7xl text-white leading-[1.04] mb-8"
+              className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.06] mb-6 md:mb-8"
             >
               Building technology that saves lives{" "}
               <span className="text-royal-bright">before disaster strikes.</span>

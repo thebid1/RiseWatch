@@ -44,16 +44,16 @@ export const metadata: Metadata = {
     url: "https://hazardzero.ng",
     images: [
       {
-        url: "/HAZARDZERO%20LOGO.png",
-        width: 1200,
-        height: 1200,
-        alt: "HazardZero logo",
+        url: "/logo.png",
+        width: 2000,
+        height: 2000,
+        alt: "HazardZero — R!SEWATCH logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/HAZARDZERO%20LOGO.png"],
+    images: ["/logo.png"],
   },
 };
 

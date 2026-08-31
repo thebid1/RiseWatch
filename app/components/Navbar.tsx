@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "./ui/Button";
 import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -24,6 +25,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock background scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -33,21 +42,15 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
-        <a href="#" className="flex items-center gap-2.5" aria-label="HazardZero home">
+        <a href="#" className="flex items-center" aria-label="HazardZero home">
           <Image
-            src={scrolled ? "/HAZARDZERO LOGO.png" : "/HAZARDZERO LOGO.png"}
-            alt=""
-            width={36}
-            height={36}
-            className="h-9 w-9"
+            src={scrolled ? "/logo-dark.png" : "/logo.png"}
+            alt="HazardZero — R!SEWATCH"
+            width={2000}
+            height={2000}
+            priority
+            className="h-16 w-auto sm:h-20"
           />
-          <span
-            className={`text-lg font-semibold tracking-tight transition-colors ${
-              scrolled ? "text-navy" : "text-white"
-            }`}
-          >
-            HazardZero
-          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -73,7 +76,9 @@ export function Navbar() {
         </div>
 
         <button
-          className={`lg:hidden p-2 ${scrolled ? "text-navy" : "text-white"}`}
+          className={`lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full transition-colors ${
+            scrolled ? "text-navy" : "text-white"
+          }`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
@@ -82,25 +87,33 @@ export function Navbar() {
         </button>
       </div>
 
-      {mobileOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-paper border-b border-line px-6 py-6 shadow-xl">
-          <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-base font-medium text-muted hover:text-navy"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
-            <Button href="#contact" variant="primary" size="md" className="mt-2" showArrow={false}>
-              Contact Us
-            </Button>
-          </nav>
-        </div>
-      )}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="lg:hidden absolute top-full left-0 right-0 bg-paper border-b border-line px-6 py-6 shadow-xl"
+          >
+            <nav className="flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-lg py-2 text-base font-medium text-muted hover:text-navy"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <Button href="#contact" variant="primary" size="md" className="mt-2" showArrow={false}>
+                Contact Us
+              </Button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

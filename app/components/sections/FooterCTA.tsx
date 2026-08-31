@@ -91,17 +91,14 @@ export function FooterCTA() {
         <div className="border-t border-line-dark">
           <Container>
             <div className="flex flex-col sm:flex-row items-center justify-between py-8 gap-6">
-              <a href="#" className="flex items-center gap-2.5" aria-label="HazardZero home">
+              <a href="#" className="flex items-center" aria-label="HazardZero home">
                 <Image
-                  src="/HAZARDZERO LOGO.png"
-                  alt=""
-                  width={32}
-                  height={32}
-                  className="h-8 w-8"
+                  src="/logo.png"
+                  alt="HazardZero — R!SEWATCH"
+                  width={2000}
+                  height={2000}
+                  className="h-24 w-auto sm:h-28"
                 />
-                <span className="text-white font-semibold text-lg tracking-tight">
-                  HazardZero
-                </span>
               </a>
               <p className="text-sm text-muted-light text-center">
                 © {new Date().getFullYear()} HazardZero Technology Ltd. All rights reserved.
