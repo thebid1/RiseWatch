@@ -15,6 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hazardzero.ng"),
   title: "HazardZero Technology Ltd. | Disaster Intelligence & Emergency Technology",
   description:
     "HazardZero Technology Ltd. builds life-saving disaster intelligence and emergency technology. Our flagship product R!SEWATCH is a solar-powered, offline-first flood early warning system manufactured in Nigeria.",
@@ -30,11 +31,17 @@ export const metadata: Metadata = {
     "disaster preparedness",
     "R!SEWATCH",
   ],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "HazardZero Technology Ltd. | Disaster Intelligence & Emergency Technology",
     description:
       "Building life-saving disaster intelligence and emergency technology for Africa's most vulnerable communities.",
     type: "website",
+    url: "https://hazardzero.ng",
     images: [
       {
         url: "/HAZARDZERO%20LOGO.png",
